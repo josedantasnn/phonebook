@@ -1,11 +1,8 @@
 const express = require('express')
 const app = express()
-const cors = require('cors')
 
 app.use(express.json())
-app.use(cors({
-    origin: 'http://localhost:5173'
-}))
+app.use(express.static('dist'))
 
 let persons = [
   { id: 1, name: 'Arto Hellas', number: '040-123456' },
